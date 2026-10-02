@@ -1,0 +1,108 @@
+# 🤖 Day 20 - Reverse Polish Notation (RPN) Evaluator
+
+## 📌 Phase
+
+**Expression Engines**
+
+## 🎯 Problem Statement
+
+Build an evaluator that calculates mathematical expressions written in **Reverse Polish Notation (RPN)**.
+
+RPN places the operator **after** its operands.
+
+Example:
+
+```text
+2 1 + 3 *
+```
+
+This means:
+
+```text
+(2 + 1) × 3 = 9
+```
+
+## 🧠 Approach
+
+A **Stack** is used to evaluate the expression.
+
+* 🔢 Number → PUSH into stack
+* ➕ Operator → POP two values
+* 🧮 Calculate the result
+* 📥 PUSH the result back
+
+### Stack Flow
+
+```text
+Expression: 2 1 + 3 *
+
+2 → [2]
+1 → [2, 1]
++ → [3]
+3 → [3, 3]
+* → [9]
+```
+
+Final result:
+
+```text
+9
+```
+
+## ➕ Supported Operators
+
+```text
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+```
+
+Division is truncated toward zero.
+
+## 🧪 Test Cases
+
+| Expression   | Result |
+| ------------ | -----: |
+| `2 1 + 3 *`  |    `9` |
+| `4 13 5 / +` |    `6` |
+| `4 5 -`      |   `-1` |
+| `3 2 /`      |    `1` |
+
+## 💻 Technologies
+
+* 🐍 Python
+* 📚 Stack
+* 🧮 Expression Evaluation
+
+## ⏱️ Complexity
+
+**Time Complexity:** `O(n)`
+
+Each token is processed once.
+
+**Space Complexity:** `O(n)`
+
+The stack stores intermediate results.
+
+## 🌍 Real-World Applications
+
+RPN and stack-based expression evaluation are used in:
+
+* 💻 Compilers
+* 🧮 Calculators
+* 🔍 Query Engines
+* 📝 Expression Parsers
+* ⚙️ Programming Language Processing
+
+## 🏆 Key Learning
+
+Through this challenge, I learned:
+
+* 📚 Stack-based expression evaluation
+* 🔄 PUSH and POP operations
+* 🧮 Handling multiple operators
+* 🔢 Operand ordering
+* ⚡ Time and space complexity
+* 🧪 Testing edge cases
+
